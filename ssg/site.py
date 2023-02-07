@@ -1,8 +1,9 @@
-# This code defines a Site class which has two class variables: source and dest, which are the paths to the source and destination directories respectively. 
-# The class has a method called create_dir which takes a path argument, creates a new directory in the destination path based on the relative path of the input path to the source path. 
-# It uses the mkdir method from the Path class to create the directory, with the parents and exist_ok arguments set to True, meaning that the method will create all necessary parent directories and not raise an error if the directory already exists. 
-# The build method creates the destination directory if it does not exist and loops through all files and subdirectories in the source directory using the rglob method, creating directories using the create_dir method if it encounters a directory, and ignoring files for now.
-
+"""
+This code defines a Site class which has two class variables: source and dest, which are the paths to the source and destination directories respectively. 
+The class has a method called create_dir which takes a path argument, creates a new directory in the destination path based on the relative path of the input path to the source path. 
+It uses the mkdir method from the Path class to create the directory, with the parents and exist_ok arguments set to True, meaning that the method will create all necessary parent directories and not raise an error if the directory already exists. 
+The build method creates the destination directory if it does not exist and loops through all files and subdirectories in the source directory using the rglob method, creating directories using the create_dir method if it encounters a directory, and ignoring files for now.
+"""
 from pathlib import Path
 
 class Site:
